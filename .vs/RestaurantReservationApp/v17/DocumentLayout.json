@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\Migrations\\20241015200104_SeedData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RestaurantReservation.Db\\Migrations\\20241015200104_SeedData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\jana\\source\\repos\\restaurantreservationapp\\restaurantreservation.db\\restaurantreservationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|solutionrelative:restaurantreservation.db\\restaurantreservationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,16 +19,28 @@
       "RelativeMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|solutionrelative:restaurantreservation.db\\datamodels\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\jana\\source\\repos\\restaurantreservationapp\\restaurantreservation.db\\datamodels\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|solutionrelative:restaurantreservation.db\\datamodels\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\jana\\source\\repos\\restaurantreservationapp\\restaurantreservation.db\\migrations\\20241013011508_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|solutionrelative:restaurantreservation.db\\migrations\\20241013011508_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\jana\\source\\repos\\restaurantreservationapp\\restaurantreservation.db\\migrations\\20241013225355_relations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|solutionrelative:restaurantreservation.db\\migrations\\20241013225355_relations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\jana\\source\\repos\\restaurantreservationapp\\restaurantreservation.db\\datamodels\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|solutionrelative:restaurantreservation.db\\datamodels\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\jana\\source\\repos\\restaurantreservationapp\\restaurantreservation.db\\datamodels\\restaurant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|solutionrelative:restaurantreservation.db\\datamodels\\restaurant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\jana\\source\\repos\\restaurantreservationapp\\restaurantreservation.db\\datamodels\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|solutionrelative:restaurantreservation.db\\datamodels\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\jana\\source\\repos\\restaurantreservationapp\\restaurantreservation.db\\datamodels\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|solutionrelative:restaurantreservation.db\\datamodels\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\jana\\source\\repos\\restaurantreservationapp\\restaurantreservation.db\\datamodels\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,8 +51,16 @@
       "RelativeMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|solutionrelative:restaurantreservation.db\\datamodels\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\jana\\source\\repos\\restaurantreservationapp\\restaurantreservation.db\\datamodels\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|solutionrelative:restaurantreservation.db\\datamodels\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\Migrations\\20241013225120_relations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RestaurantReservation.Db\\Migrations\\20241013225120_relations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|c:\\users\\jana\\source\\repos\\restaurantreservationapp\\restaurantreservation.db\\migrations\\restaurantreservationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA570AB-0BAE-4C46-B2DA-D7C0B3EA7EFF}|RestaurantReservation.Db\\RestaurantReservation.Db.csproj|solutionrelative:restaurantreservation.db\\migrations\\restaurantreservationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\Migrations\\20241013222443_relations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RestaurantReservation.Db\\Migrations\\20241013222443_relations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,128 +70,206 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RestaurantReservationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\RestaurantReservationDbContext.cs",
-              "RelativeDocumentMoniker": "RestaurantReservation.Db\\RestaurantReservationDbContext.cs",
-              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\RestaurantReservationDbContext.cs",
-              "RelativeToolTip": "RestaurantReservation.Db\\RestaurantReservationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T17:14:37.965Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MenuItem.cs",
-              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\MenuItem.cs",
-              "RelativeDocumentMoniker": "RestaurantReservation.Db\\DataModels\\MenuItem.cs",
-              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\MenuItem.cs",
-              "RelativeToolTip": "RestaurantReservation.Db\\DataModels\\MenuItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T14:15:00.761Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "OrderItem.cs",
-              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\OrderItem.cs",
-              "RelativeDocumentMoniker": "RestaurantReservation.Db\\DataModels\\OrderItem.cs",
-              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\OrderItem.cs",
-              "RelativeToolTip": "RestaurantReservation.Db\\DataModels\\OrderItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "20241015200104_SeedData.cs",
+              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\Migrations\\20241015200104_SeedData.cs",
+              "RelativeDocumentMoniker": "RestaurantReservation.Db\\Migrations\\20241015200104_SeedData.cs",
+              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\Migrations\\20241015200104_SeedData.cs",
+              "RelativeToolTip": "RestaurantReservation.Db\\Migrations\\20241015200104_SeedData.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwDIAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T14:13:27.066Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Restaurant.cs",
-              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Restaurant.cs",
-              "RelativeDocumentMoniker": "RestaurantReservation.Db\\DataModels\\Restaurant.cs",
-              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Restaurant.cs",
-              "RelativeToolTip": "RestaurantReservation.Db\\DataModels\\Restaurant.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T14:08:41.474Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Employee.cs",
-              "RelativeDocumentMoniker": "RestaurantReservation.Db\\DataModels\\Employee.cs",
-              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Employee.cs",
-              "RelativeToolTip": "RestaurantReservation.Db\\DataModels\\Employee.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T14:05:48.005Z",
+              "WhenOpened": "2024-10-15T20:01:04.917Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Order.cs",
-              "RelativeDocumentMoniker": "RestaurantReservation.Db\\DataModels\\Order.cs",
-              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Order.cs",
-              "RelativeToolTip": "RestaurantReservation.Db\\DataModels\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
+              "Title": "20241013011508_initial.cs",
+              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\Migrations\\20241013011508_initial.cs",
+              "RelativeDocumentMoniker": "RestaurantReservation.Db\\Migrations\\20241013011508_initial.cs",
+              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\Migrations\\20241013011508_initial.cs",
+              "RelativeToolTip": "RestaurantReservation.Db\\Migrations\\20241013011508_initial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T14:03:18.913Z",
+              "WhenOpened": "2024-10-15T18:57:36.103Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Reservation.cs",
-              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Reservation.cs",
-              "RelativeDocumentMoniker": "RestaurantReservation.Db\\DataModels\\Reservation.cs",
-              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Reservation.cs",
-              "RelativeToolTip": "RestaurantReservation.Db\\DataModels\\Reservation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "20241013225355_relations.cs",
+              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\Migrations\\20241013225355_relations.cs",
+              "RelativeDocumentMoniker": "RestaurantReservation.Db\\Migrations\\20241013225355_relations.cs",
+              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\Migrations\\20241013225355_relations.cs",
+              "RelativeToolTip": "RestaurantReservation.Db\\Migrations\\20241013225355_relations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T13:59:30.724Z",
+              "WhenOpened": "2024-10-13T22:53:55.573Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
+              "Title": "20241013225120_relations.cs",
+              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\Migrations\\20241013225120_relations.cs",
+              "RelativeDocumentMoniker": "RestaurantReservation.Db\\Migrations\\20241013225120_relations.cs",
+              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\Migrations\\20241013225120_relations.cs",
+              "RelativeToolTip": "RestaurantReservation.Db\\Migrations\\20241013225120_relations.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T22:51:20.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Table.cs",
               "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Table.cs",
               "RelativeDocumentMoniker": "RestaurantReservation.Db\\DataModels\\Table.cs",
               "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Table.cs",
               "RelativeToolTip": "RestaurantReservation.Db\\DataModels\\Table.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T13:52:39.213Z",
+              "WhenOpened": "2024-10-13T22:42:10.019Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
+              "Title": "Restaurant.cs",
+              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Restaurant.cs",
+              "RelativeDocumentMoniker": "RestaurantReservation.Db\\DataModels\\Restaurant.cs",
+              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Restaurant.cs",
+              "RelativeToolTip": "RestaurantReservation.Db\\DataModels\\Restaurant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T22:42:04.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\OrderItem.cs",
+              "RelativeDocumentMoniker": "RestaurantReservation.Db\\DataModels\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\OrderItem.cs",
+              "RelativeToolTip": "RestaurantReservation.Db\\DataModels\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T22:41:22.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Customer.cs",
               "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Customer.cs",
               "RelativeDocumentMoniker": "RestaurantReservation.Db\\DataModels\\Customer.cs",
               "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Customer.cs",
               "RelativeToolTip": "RestaurantReservation.Db\\DataModels\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T13:44:14.186Z",
+              "WhenOpened": "2024-10-13T22:38:28.426Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Employee.cs",
+              "RelativeDocumentMoniker": "RestaurantReservation.Db\\DataModels\\Employee.cs",
+              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Employee.cs",
+              "RelativeToolTip": "RestaurantReservation.Db\\DataModels\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T22:29:37.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Order.cs",
+              "RelativeDocumentMoniker": "RestaurantReservation.Db\\DataModels\\Order.cs",
+              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Order.cs",
+              "RelativeToolTip": "RestaurantReservation.Db\\DataModels\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T22:29:25.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MenuItem.cs",
+              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\MenuItem.cs",
+              "RelativeDocumentMoniker": "RestaurantReservation.Db\\DataModels\\MenuItem.cs",
+              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\MenuItem.cs",
+              "RelativeToolTip": "RestaurantReservation.Db\\DataModels\\MenuItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T22:29:24.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RestaurantReservationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\Migrations\\RestaurantReservationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "RestaurantReservation.Db\\Migrations\\RestaurantReservationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\Migrations\\RestaurantReservationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "RestaurantReservation.Db\\Migrations\\RestaurantReservationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAOgAAAAAZmZmZmYswBMAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T22:27:43.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RestaurantReservationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\RestaurantReservationDbContext.cs",
+              "RelativeDocumentMoniker": "RestaurantReservation.Db\\RestaurantReservationDbContext.cs",
+              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\RestaurantReservationDbContext.cs",
+              "RelativeToolTip": "RestaurantReservation.Db\\RestaurantReservationDbContext.cs",
+              "ViewState": "AgIAACMAAACALjMzMzMbwHAAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T22:27:39.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Reservation.cs",
+              "RelativeDocumentMoniker": "RestaurantReservation.Db\\DataModels\\Reservation.cs",
+              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\DataModels\\Reservation.cs",
+              "RelativeToolTip": "RestaurantReservation.Db\\DataModels\\Reservation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T22:25:11.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20241013222443_relations.cs",
+              "DocumentMoniker": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\Migrations\\20241013222443_relations.cs",
+              "RelativeDocumentMoniker": "RestaurantReservation.Db\\Migrations\\20241013222443_relations.cs",
+              "ToolTip": "C:\\Users\\Jana\\source\\repos\\RestaurantReservationApp\\RestaurantReservation.Db\\Migrations\\20241013222443_relations.cs",
+              "RelativeToolTip": "RestaurantReservation.Db\\Migrations\\20241013222443_relations.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T22:24:44.086Z"
             }
           ]
         }
