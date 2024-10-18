@@ -1,4 +1,6 @@
-﻿namespace RestaurantReservation.Db.DataModels
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace RestaurantReservation.Db.DataModels
 {
     public class OrderItemServices
     {
@@ -37,6 +39,15 @@
                 _context.OrderItems.Remove(orderItem);
                 _context.SaveChanges();
             }
+        }
+
+        public List<MenuItem> ListOrderedMenuItems(int reservationId)
+        {
+            return _context.OrderItems
+                           .Include(oi => oi.MenuItem)
+                           .Where(oi => oi.Order.ReservationId == reservationId)
+                           .Select(oi => oi.MenuItem)
+                           .ToList();
         }
     }
 }

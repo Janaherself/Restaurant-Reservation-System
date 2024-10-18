@@ -1,4 +1,6 @@
-﻿namespace RestaurantReservation.Db.DataModels
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace RestaurantReservation.Db.DataModels
 {
     public class EmployeeServices
     {
@@ -38,6 +40,11 @@
                 _context.Employees.Remove(employee);
                 _context.SaveChanges();
             }
+        }
+        public List<Employee> ListManagers()
+        {
+            var managers = _context.Employees.Where(e => e.Position == "Manager").ToList();
+            return managers;
         }
     }
 }

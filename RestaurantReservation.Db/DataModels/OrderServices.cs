@@ -40,5 +40,18 @@
                 _context.SaveChanges();
             }
         }
+
+        public double CalculateAverageOrderAmount(int employeeId)
+        {
+            var orders = _context.Orders.Where(o => o.EmployeeId == employeeId);
+            if (orders.Any())
+            {
+                return orders.Average(o =>  o.TotalAmount);
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }
