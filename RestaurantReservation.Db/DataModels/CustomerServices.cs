@@ -41,13 +41,13 @@ namespace RestaurantReservation.Db.DataModels
             }
         }
 
-        public List<Reservation> GetReservationsByCustomer(int customerId)
+        public async Task<List<Reservation>> GetReservationsByCustomerAsync(int customerId)
         {
-            return _context.Reservations
+            return await _context.Reservations
                            .Include(c => c.Customer)
                            .Include(c => c.Restaurant)
                            .Where(c => c.CustomerId == customerId)
-                           .ToList();
+                           .ToListAsync();
         }
     }
 }

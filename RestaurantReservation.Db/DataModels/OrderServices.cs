@@ -1,4 +1,6 @@
-﻿namespace RestaurantReservation.Db.DataModels
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace RestaurantReservation.Db.DataModels
 {
     public class OrderServices
     {
@@ -41,17 +43,13 @@
             }
         }
 
-        public double CalculateAverageOrderAmount(int employeeId)
+        public async Task<double> CalculateAverageOrderAmount(int employeeId)
         {
-            var orders = _context.Orders.Where(o => o.EmployeeId == employeeId);
-            if (orders.Any())
-            {
-                return orders.Average(o =>  o.TotalAmount);
-            }
-            else
-            {
-                return 0;
-            }
+            var orders = await _context.Orders
+                                       .Where(o => o.EmployeeId == employeeId)
+                                       .ToListAsync();
+
+            return orders.Count != 0 ? orders.Average(o => o.TotalAmount) : 0;
         }
     }
 }

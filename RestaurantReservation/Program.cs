@@ -3,13 +3,13 @@ using RestaurantReservation.Db;
 
 //CreateExampleCustomer();
 
-//Listmanagers();
+Listmanagers();
 
-//GetReservationsByCustomer();
+GetReservationsByCustomer();
 
-//ListOrdersAndMenuItems();
+ListOrdersAndMenuItems();
 
-//ListOrderedMenuItems();
+ListOrderedMenuItems();
 
 CalculateAverageOrderAmount();
 
@@ -19,7 +19,7 @@ static void CalculateAverageOrderAmount()
     var orderService = new OrderServices(dbContext);
 
     Console.WriteLine($"Average order amount of employee with Id = 8 is: " +
-        $"{orderService.CalculateAverageOrderAmount(8)}");
+        $"{orderService.CalculateAverageOrderAmount(8).Result}");
 }
 
 static void ListOrderedMenuItems()
@@ -28,7 +28,9 @@ static void ListOrderedMenuItems()
     var orderItemService = new OrderItemServices(dbContext);
     var items = orderItemService.ListOrderedMenuItems(5);
 
-    foreach ( var item in items)
+    Console.WriteLine($"Ordered menu items for the reservation with Id = 5 is: \n");
+
+    foreach ( var item in items.Result)
     {
         Console.WriteLine($"{item.MenuItemId}. {item.Name}");
     }
@@ -40,9 +42,11 @@ static void ListOrdersAndMenuItems()
     var reservationService = new ReservationServices(dbContext);
     var orders = reservationService.ListOrdersAndMenuItems(5);
 
-    foreach (var order in orders)
+    Console.WriteLine($"Orders and menu items for the reservation with Id = 5 is: ");
+
+    foreach (var order in orders.Result)
     {
-        Console.WriteLine($"Order ID: {order.OrderId}, Total Amount: {order.TotalAmount}");
+        Console.WriteLine($"\nOrder ID: {order.OrderId}, Total Amount: {order.TotalAmount}");
 
         foreach (var item in order.OrderItems)
         {
@@ -55,9 +59,11 @@ static void GetReservationsByCustomer()
 {
     var dbContext = new RestaurantReservationDbContext();
     var customerService = new CustomerServices(dbContext);
-    var reservations = customerService.GetReservationsByCustomer(1);
+    var reservations = customerService.GetReservationsByCustomerAsync(1);
 
-    foreach (var reservation in reservations)
+    Console.WriteLine($"Reservation of the customer with Id = 1 is: \n");
+
+    foreach (var reservation in reservations.Result)
     {
         Console.WriteLine($"{reservation.ReservationId}. {reservation.ReservationDate}\n" +
                           $"{reservation.Restaurant.Name}\n" +
@@ -72,7 +78,7 @@ static void Listmanagers()
     var employeeService = new EmployeeServices(dbContext);
     var managers = employeeService.ListManagers();
 
-    foreach (var manager in managers)
+    foreach (var manager in managers.Result)
     {
         Console.WriteLine($"{manager.FirstName} {manager.LastName}");
     }

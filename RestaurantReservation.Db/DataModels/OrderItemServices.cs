@@ -41,13 +41,13 @@ namespace RestaurantReservation.Db.DataModels
             }
         }
 
-        public List<MenuItem> ListOrderedMenuItems(int reservationId)
+        public async Task<List<MenuItem>> ListOrderedMenuItems(int reservationId)
         {
-            return _context.OrderItems
+            return await _context.OrderItems
                            .Include(oi => oi.MenuItem)
                            .Where(oi => oi.Order.ReservationId == reservationId)
                            .Select(oi => oi.MenuItem)
-                           .ToList();
+                           .ToListAsync();
         }
     }
 }
