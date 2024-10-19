@@ -41,7 +41,7 @@ namespace RestaurantReservation.Db.DataModels
             }
         }
 
-        public async Task<List<MenuItem>> ListOrderedMenuItems(int reservationId)
+        public async Task<List<MenuItem>> ListOrderedMenuItemsAsync(int reservationId)
         {
             return await _context.OrderItems
                            .Include(oi => oi.MenuItem)

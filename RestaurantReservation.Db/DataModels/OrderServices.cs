@@ -43,7 +43,7 @@ namespace RestaurantReservation.Db.DataModels
             }
         }
 
-        public async Task<double> CalculateAverageOrderAmount(int employeeId)
+        public async Task<double> CalculateAverageOrderAmountAsync(int employeeId)
         {
             var orders = await _context.Orders
                                        .Where(o => o.EmployeeId == employeeId)
@@ -51,5 +51,13 @@ namespace RestaurantReservation.Db.DataModels
 
             return orders.Count != 0 ? orders.Average(o => o.TotalAmount) : 0;
         }
+
+        public async Task<decimal> CalculateTotalRevenueByRestaurantAsync(int restaurantId)
+        {
+            return await _context.Database
+                                 .SqlQuery<decimal>($"SELECT dbo.CalculateTotalRevenue({restaurantId}) AS Value")
+                                 .SingleAsync();
+        }
+
     }
 }

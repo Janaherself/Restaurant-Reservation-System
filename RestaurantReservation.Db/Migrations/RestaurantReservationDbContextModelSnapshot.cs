@@ -205,6 +205,32 @@ namespace RestaurantReservation.Db.Migrations
                         });
                 });
 
+            modelBuilder.Entity("RestaurantReservation.Db.DataModels.EmployeeView", b =>
+                {
+                    b.Property<int>("EmployeeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Position")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RestaurantName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable((string)null);
+
+                    b.ToView("EmployeesView", (string)null);
+                });
+
             modelBuilder.Entity("RestaurantReservation.Db.DataModels.MenuItem", b =>
                 {
                     b.Property<int>("MenuItemId")
@@ -341,7 +367,7 @@ namespace RestaurantReservation.Db.Migrations
                         {
                             OrderId = 1,
                             EmployeeId = 3,
-                            OrderDate = new DateTime(2024, 10, 17, 23, 15, 40, 47, DateTimeKind.Local).AddTicks(7076),
+                            OrderDate = new DateTime(2024, 10, 19, 4, 13, 38, 308, DateTimeKind.Local).AddTicks(6400),
                             ReservationId = 1,
                             TotalAmount = 10
                         },
@@ -349,7 +375,7 @@ namespace RestaurantReservation.Db.Migrations
                         {
                             OrderId = 2,
                             EmployeeId = 2,
-                            OrderDate = new DateTime(2024, 10, 17, 23, 15, 40, 47, DateTimeKind.Local).AddTicks(7086),
+                            OrderDate = new DateTime(2024, 10, 19, 4, 13, 38, 308, DateTimeKind.Local).AddTicks(6411),
                             ReservationId = 2,
                             TotalAmount = 5
                         },
@@ -357,7 +383,7 @@ namespace RestaurantReservation.Db.Migrations
                         {
                             OrderId = 3,
                             EmployeeId = 1,
-                            OrderDate = new DateTime(2024, 10, 17, 23, 15, 40, 47, DateTimeKind.Local).AddTicks(7091),
+                            OrderDate = new DateTime(2024, 10, 19, 4, 13, 38, 308, DateTimeKind.Local).AddTicks(6423),
                             ReservationId = 3,
                             TotalAmount = 7
                         },
@@ -365,7 +391,7 @@ namespace RestaurantReservation.Db.Migrations
                         {
                             OrderId = 4,
                             EmployeeId = 5,
-                            OrderDate = new DateTime(2024, 10, 17, 23, 15, 40, 47, DateTimeKind.Local).AddTicks(7095),
+                            OrderDate = new DateTime(2024, 10, 19, 4, 13, 38, 308, DateTimeKind.Local).AddTicks(6433),
                             ReservationId = 4,
                             TotalAmount = 9
                         },
@@ -373,7 +399,7 @@ namespace RestaurantReservation.Db.Migrations
                         {
                             OrderId = 5,
                             EmployeeId = 4,
-                            OrderDate = new DateTime(2024, 10, 17, 23, 15, 40, 47, DateTimeKind.Local).AddTicks(7099),
+                            OrderDate = new DateTime(2024, 10, 19, 4, 13, 38, 308, DateTimeKind.Local).AddTicks(6447),
                             ReservationId = 5,
                             TotalAmount = 4
                         },
@@ -381,7 +407,7 @@ namespace RestaurantReservation.Db.Migrations
                         {
                             OrderId = 6,
                             EmployeeId = 7,
-                            OrderDate = new DateTime(2024, 10, 17, 23, 15, 40, 47, DateTimeKind.Local).AddTicks(7104),
+                            OrderDate = new DateTime(2024, 10, 19, 4, 13, 38, 308, DateTimeKind.Local).AddTicks(6462),
                             ReservationId = 5,
                             TotalAmount = 21
                         },
@@ -389,7 +415,7 @@ namespace RestaurantReservation.Db.Migrations
                         {
                             OrderId = 7,
                             EmployeeId = 8,
-                            OrderDate = new DateTime(2024, 10, 17, 23, 15, 40, 47, DateTimeKind.Local).AddTicks(7108),
+                            OrderDate = new DateTime(2024, 10, 19, 4, 13, 38, 308, DateTimeKind.Local).AddTicks(6476),
                             ReservationId = 7,
                             TotalAmount = 5
                         },
@@ -397,7 +423,7 @@ namespace RestaurantReservation.Db.Migrations
                         {
                             OrderId = 8,
                             EmployeeId = 8,
-                            OrderDate = new DateTime(2024, 10, 17, 23, 15, 40, 47, DateTimeKind.Local).AddTicks(7112),
+                            OrderDate = new DateTime(2024, 10, 19, 4, 13, 38, 308, DateTimeKind.Local).AddTicks(6488),
                             ReservationId = 6,
                             TotalAmount = 3
                         });
@@ -533,7 +559,7 @@ namespace RestaurantReservation.Db.Migrations
                             ReservationId = 1,
                             CustomerId = 1,
                             PartySize = 4,
-                            ReservationDate = new DateTime(2024, 10, 18, 23, 15, 40, 47, DateTimeKind.Local).AddTicks(6934),
+                            ReservationDate = new DateTime(2024, 10, 20, 4, 13, 38, 308, DateTimeKind.Local).AddTicks(6164),
                             RestaurantId = 1,
                             TableId = 1
                         },
@@ -542,7 +568,7 @@ namespace RestaurantReservation.Db.Migrations
                             ReservationId = 2,
                             CustomerId = 2,
                             PartySize = 2,
-                            ReservationDate = new DateTime(2024, 10, 19, 23, 15, 40, 47, DateTimeKind.Local).AddTicks(6996),
+                            ReservationDate = new DateTime(2024, 10, 21, 4, 13, 38, 308, DateTimeKind.Local).AddTicks(6231),
                             RestaurantId = 2,
                             TableId = 3
                         },
@@ -551,7 +577,7 @@ namespace RestaurantReservation.Db.Migrations
                             ReservationId = 3,
                             CustomerId = 3,
                             PartySize = 4,
-                            ReservationDate = new DateTime(2024, 10, 20, 23, 15, 40, 47, DateTimeKind.Local).AddTicks(7001),
+                            ReservationDate = new DateTime(2024, 10, 22, 4, 13, 38, 308, DateTimeKind.Local).AddTicks(6247),
                             RestaurantId = 1,
                             TableId = 2
                         },
@@ -560,7 +586,7 @@ namespace RestaurantReservation.Db.Migrations
                             ReservationId = 4,
                             CustomerId = 4,
                             PartySize = 4,
-                            ReservationDate = new DateTime(2024, 10, 21, 23, 15, 40, 47, DateTimeKind.Local).AddTicks(7007),
+                            ReservationDate = new DateTime(2024, 10, 23, 4, 13, 38, 308, DateTimeKind.Local).AddTicks(6264),
                             RestaurantId = 3,
                             TableId = 5
                         },
@@ -569,7 +595,7 @@ namespace RestaurantReservation.Db.Migrations
                             ReservationId = 5,
                             CustomerId = 5,
                             PartySize = 6,
-                            ReservationDate = new DateTime(2024, 10, 22, 23, 15, 40, 47, DateTimeKind.Local).AddTicks(7011),
+                            ReservationDate = new DateTime(2024, 10, 24, 4, 13, 38, 308, DateTimeKind.Local).AddTicks(6272),
                             RestaurantId = 3,
                             TableId = 4
                         },
@@ -578,7 +604,7 @@ namespace RestaurantReservation.Db.Migrations
                             ReservationId = 6,
                             CustomerId = 1,
                             PartySize = 3,
-                            ReservationDate = new DateTime(2024, 10, 23, 23, 15, 40, 47, DateTimeKind.Local).AddTicks(7016),
+                            ReservationDate = new DateTime(2024, 10, 25, 4, 13, 38, 308, DateTimeKind.Local).AddTicks(6286),
                             RestaurantId = 6,
                             TableId = 13
                         },
@@ -587,10 +613,35 @@ namespace RestaurantReservation.Db.Migrations
                             ReservationId = 7,
                             CustomerId = 3,
                             PartySize = 2,
-                            ReservationDate = new DateTime(2024, 10, 24, 23, 15, 40, 47, DateTimeKind.Local).AddTicks(7020),
+                            ReservationDate = new DateTime(2024, 10, 26, 4, 13, 38, 308, DateTimeKind.Local).AddTicks(6299),
                             RestaurantId = 5,
                             TableId = 7
                         });
+                });
+
+            modelBuilder.Entity("RestaurantReservation.Db.DataModels.ReservationView", b =>
+                {
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ReservationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ReservationId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("RestaurantName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable((string)null);
+
+                    b.ToView("ReservationsView", (string)null);
                 });
 
             modelBuilder.Entity("RestaurantReservation.Db.DataModels.Restaurant", b =>

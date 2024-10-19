@@ -41,9 +41,14 @@ namespace RestaurantReservation.Db.DataModels
                 _context.SaveChanges();
             }
         }
-        public async Task<List<Employee>> ListManagers()
+        public async Task<List<Employee>> ListManagersAsync()
         {
             return await _context.Employees.Where(e => e.Position == "Manager").ToListAsync();
+        }
+
+        public async Task<List<EmployeeView>> EmployeeViewAsync()
+        {
+            return await _context.EmployeesView.ToListAsync();
         }
     }
 }

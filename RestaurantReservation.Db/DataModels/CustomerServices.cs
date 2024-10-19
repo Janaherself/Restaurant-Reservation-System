@@ -49,5 +49,12 @@ namespace RestaurantReservation.Db.DataModels
                            .Where(c => c.CustomerId == customerId)
                            .ToListAsync();
         }
+
+        public async Task<List<Customer>> GetCustomersWithPartySizeGreaterThanAsync(int partySize)
+        {
+            return await _context.Customers
+                           .FromSqlInterpolated($"GetCustomersWithPartySizeGreaterThan {partySize}")
+                           .ToListAsync();
+        }
     }
 }

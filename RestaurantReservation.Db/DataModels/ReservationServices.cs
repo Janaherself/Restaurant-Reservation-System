@@ -45,13 +45,18 @@ namespace RestaurantReservation.Db.DataModels
             }
         }
 
-        public async Task<List<Order>> ListOrdersAndMenuItems(int reservationId)
+        public async Task<List<Order>> ListOrdersAndMenuItemsAsync(int reservationId)
         {
             return await _context.Orders
                 .Include(o => o.OrderItems)
                 .ThenInclude(oi => oi.MenuItem)
                 .Where(o => o.ReservationId == reservationId)
                 .ToListAsync();
+        }
+
+        public async Task<List<ReservationView>> ReservationViewAsync()
+        {
+            return await _context.ReservationsView.ToListAsync();
         }
     }
 }

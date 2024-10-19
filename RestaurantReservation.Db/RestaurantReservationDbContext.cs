@@ -13,6 +13,9 @@ namespace RestaurantReservation.Db
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<Table> Tables { get; set; }
+        public DbSet<ReservationView> ReservationsView { get; set; }
+        public DbSet<EmployeeView> EmployeesView { get; set; }
+
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -24,6 +27,10 @@ namespace RestaurantReservation.Db
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<EmployeeView>().HasNoKey().ToView("EmployeesView");
+
+            modelBuilder.Entity<ReservationView>().HasNoKey().ToView("ReservationsView");
+
             modelBuilder.Entity<OrderItem>()
                 .ToTable("OrderItems");
 
