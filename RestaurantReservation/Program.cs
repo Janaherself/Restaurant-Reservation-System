@@ -1,5 +1,6 @@
 ﻿using RestaurantReservation.Db.DataModels;
 using RestaurantReservation.Db;
+using RestaurantReservation.Db.Repositories;
 
 //CreateExampleCustomer();
 
@@ -24,7 +25,7 @@ GetCustomersWithPartySize();
 static void GetCustomersWithPartySize()
 {
     var dbContext = new RestaurantReservationDbContext();
-    var customerService = new CustomerServices(dbContext);
+    var customerService = new CustomerRepository(dbContext);
     var customers = customerService.GetCustomersWithPartySizeGreaterThanAsync(3);
     
     Console.WriteLine($"Customers with party size greater than 3 are: ");
@@ -38,7 +39,7 @@ static void GetCustomersWithPartySize()
 static void CalculateTotalRevenue()
 {
     var dbContext = new RestaurantReservationDbContext();
-    var orderService = new OrderServices(dbContext);
+    var orderService = new OrderRepository(dbContext);
     var totalRevenue = orderService.CalculateTotalRevenueByRestaurantAsync(1);
 
     Console.WriteLine($"Total revenue for restaurant with Id = 1 is: {totalRevenue.Result}$");
@@ -47,7 +48,7 @@ static void CalculateTotalRevenue()
 static void GetEmployeesByView()
 {
     var dbContext = new RestaurantReservationDbContext();
-    var employeeService = new EmployeeServices(dbContext);
+    var employeeService = new EmployeeRepository(dbContext);
     var employees = employeeService.EmployeeViewAsync();
 
     foreach (var employee in employees.Result)
@@ -60,7 +61,7 @@ static void GetEmployeesByView()
 static void GetReservationsByView()
 {
     var dbContext = new RestaurantReservationDbContext();
-    var reservationService = new ReservationServices(dbContext);
+    var reservationService = new ReservationRepository(dbContext);
     var reservations = reservationService.ReservationViewAsync();
 
     foreach (var reservation in reservations.Result)
@@ -73,7 +74,7 @@ static void GetReservationsByView()
 static void CalculateAverageOrderAmount()
 {
     var dbContext = new RestaurantReservationDbContext();
-    var orderService = new OrderServices(dbContext);
+    var orderService = new OrderRepository(dbContext);
 
     Console.WriteLine($"Average order amount of employee with Id = 8 is: " +
         $"{orderService.CalculateAverageOrderAmountAsync(8).Result}");
@@ -82,7 +83,7 @@ static void CalculateAverageOrderAmount()
 static void ListOrderedMenuItems()
 {
     var dbContext = new RestaurantReservationDbContext();
-    var orderItemService = new OrderItemServices(dbContext);
+    var orderItemService = new OrderItemRepository(dbContext);
     var items = orderItemService.ListOrderedMenuItemsAsync(5);
 
     Console.WriteLine($"Ordered menu items for the reservation with Id = 5 is: \n");
@@ -96,7 +97,7 @@ static void ListOrderedMenuItems()
 static void ListOrdersAndMenuItems()
 {
     var dbContext = new RestaurantReservationDbContext();
-    var reservationService = new ReservationServices(dbContext);
+    var reservationService = new ReservationRepository(dbContext);
     var orders = reservationService.ListOrdersAndMenuItemsAsync(5);
 
     Console.WriteLine($"Orders and menu items for the reservation with Id = 5 is: ");
@@ -115,7 +116,7 @@ static void ListOrdersAndMenuItems()
 static void GetReservationsByCustomer()
 {
     var dbContext = new RestaurantReservationDbContext();
-    var customerService = new CustomerServices(dbContext);
+    var customerService = new CustomerRepository(dbContext);
     var reservations = customerService.GetReservationsByCustomerAsync(1);
 
     Console.WriteLine($"Reservation of the customer with Id = 1 is: \n");
@@ -132,7 +133,7 @@ static void GetReservationsByCustomer()
 static void Listmanagers()
 {
     var dbContext = new RestaurantReservationDbContext();
-    var employeeService = new EmployeeServices(dbContext);
+    var employeeService = new EmployeeRepository(dbContext);
     var managers = employeeService.ListManagersAsync();
 
     foreach (var manager in managers.Result)
@@ -143,7 +144,7 @@ static void Listmanagers()
 static void CreateExampleCustomer()
 {
     var dbContext = new RestaurantReservationDbContext();
-    var customerService = new CustomerServices(dbContext);
+    var customerService = new CustomerRepository(dbContext);
     customerService.CreateCustomer(new Customer
     {
         FirstName = "Jana",
