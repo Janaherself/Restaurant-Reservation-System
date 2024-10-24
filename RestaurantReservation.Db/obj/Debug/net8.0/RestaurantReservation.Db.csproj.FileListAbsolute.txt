@@ -1,0 +1,14 @@
+C:\Users\Jana\source\repos\RestaurantReservationApp\RestaurantReservation.Db\bin\Debug\net8.0\RestaurantReservation.Db.deps.json
+C:\Users\Jana\source\repos\RestaurantReservationApp\RestaurantReservation.Db\bin\Debug\net8.0\RestaurantReservation.Db.dll
+C:\Users\Jana\source\repos\RestaurantReservationApp\RestaurantReservation.Db\bin\Debug\net8.0\RestaurantReservation.Db.pdb
+C:\Users\Jana\source\repos\RestaurantReservationApp\RestaurantReservation.Db\obj\Debug\net8.0\RestaurantReservation.Db.csproj.AssemblyReference.cache
+C:\Users\Jana\source\repos\RestaurantReservationApp\RestaurantReservation.Db\obj\Debug\net8.0\RestaurantReservation.Db.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jana\source\repos\RestaurantReservationApp\RestaurantReservation.Db\obj\Debug\net8.0\RestaurantReservation.Db.AssemblyInfoInputs.cache
+C:\Users\Jana\source\repos\RestaurantReservationApp\RestaurantReservation.Db\obj\Debug\net8.0\RestaurantReservation.Db.AssemblyInfo.cs
+C:\Users\Jana\source\repos\RestaurantReservationApp\RestaurantReservation.Db\obj\Debug\net8.0\RestaurantReservation.Db.csproj.CoreCompileInputs.cache
+C:\Users\Jana\source\repos\RestaurantReservationApp\RestaurantReservation.Db\obj\Debug\net8.0\RestaurantReservation.Db.dll
+C:\Users\Jana\source\repos\RestaurantReservationApp\RestaurantReservation.Db\obj\Debug\net8.0\refint\RestaurantReservation.Db.dll
+C:\Users\Jana\source\repos\RestaurantReservationApp\RestaurantReservation.Db\obj\Debug\net8.0\RestaurantReservation.Db.pdb
+C:\Users\Jana\source\repos\RestaurantReservationApp\RestaurantReservation.Db\obj\Debug\net8.0\ref\RestaurantReservation.Db.dll
+C:\Users\Jana\source\repos\RestaurantReservationApp\RestaurantReservation.Db\bin\Debug\net8.0\RestaurantReservation.Db.runtimeconfig.json
+C:\Users\Jana\source\repos\RestaurantReservationApp\RestaurantReservation.Db\obj\Debug\net8.0\RestaurantReservation.Db.genruntimeconfig.cache
