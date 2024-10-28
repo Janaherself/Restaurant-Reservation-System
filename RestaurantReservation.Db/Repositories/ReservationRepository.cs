@@ -4,15 +4,8 @@ using RestaurantReservation.Db.RepositoriesInterfaces;
 
 namespace RestaurantReservation.Db.Repositories
 {
-    public class ReservationRepository : IReservationRepository
+    public class ReservationRepository : BaseRepository, IReservationRepository
     {
-        private readonly RestaurantReservationDbContext _context;
-
-        public ReservationRepository(RestaurantReservationDbContext context)
-        {
-            _context = context;
-        }
-
         public async Task CreateReservationAsync(Reservation reservation)
         {
             _context.Reservations.Add(reservation);

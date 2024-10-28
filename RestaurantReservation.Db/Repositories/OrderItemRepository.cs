@@ -4,15 +4,8 @@ using RestaurantReservation.Db.RepositoriesInterfaces;
 
 namespace RestaurantReservation.Db.Repositories
 {
-    public class OrderItemRepository : IOrderItemRepository
+    public class OrderItemRepository : BaseRepository, IOrderItemRepository
     {
-        private readonly RestaurantReservationDbContext _context;
-
-        public OrderItemRepository(RestaurantReservationDbContext context)
-        {
-            _context = context;
-        }
-
         public async Task CreateOrderItemAsync(OrderItem orderItem)
         {
             _context.OrderItems.Add(orderItem);

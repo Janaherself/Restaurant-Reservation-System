@@ -3,15 +3,8 @@ using RestaurantReservation.Db.RepositoriesInterfaces;
 
 namespace RestaurantReservation.Db.Repositories
 {
-    public class MenuItemRepository : IMenuItemRepository
+    public class MenuItemRepository : BaseRepository, IMenuItemRepository
     {
-        private readonly RestaurantReservationDbContext _context;
-
-        public MenuItemRepository(RestaurantReservationDbContext context)
-        {
-            _context = context;
-        }
-
         public async Task CreateMenuItemAsync(MenuItem menuItem)
         {
             _context.MenuItem.Add(menuItem);
