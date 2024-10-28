@@ -1,8 +1,9 @@
 ﻿using RestaurantReservation.Db.DataModels;
+using RestaurantReservation.Db.RepositoriesInterfaces;
 
 namespace RestaurantReservation.Db.Repositories
 {
-    public class TableRepository
+    public class TableRepository : ITableRepository
     {
         private readonly RestaurantReservationDbContext _context;
 
@@ -11,32 +12,25 @@ namespace RestaurantReservation.Db.Repositories
             _context = context;
         }
 
-        public void CreateTable(Table table)
+        public async Task CreateTableAsync(Table table)
         {
             _context.Tables.Add(table);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
-        public void UpdateTable(Table table)
+        public async Task UpdateTableAsync(Table table)
         {
-            var existingTable = _context.Tables.Find(table.TableId);
-            if (existingTable != null)
-            {
-                existingTable.Capacity = table.Capacity;
-                existingTable.Restaurant = table.Restaurant;
-                existingTable.RestaurantId = table.RestaurantId;
-                existingTable.Reservations = table.Reservations;
-                _context.SaveChanges();
-            }
+            _context.Tables.Update(table);
+            await _context.SaveChangesAsync();
         }
 
-        public void DeleteTable(int tableId)
+        public async Task DeleteTableAsync(int tableId)
         {
             var table = _context.Tables.Find(tableId);
             if (table != null)
             {
                 _context.Tables.Remove(table);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
         }
     }

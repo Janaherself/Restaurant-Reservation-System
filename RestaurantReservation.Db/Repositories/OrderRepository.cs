@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RestaurantReservation.Db.DataModels;
+using RestaurantReservation.Db.RepositoriesInterfaces;
 
 namespace RestaurantReservation.Db.Repositories
 {
-    public class OrderRepository
+    public class OrderRepository : IOrderRepository
     {
         private readonly RestaurantReservationDbContext _context;
 
@@ -12,36 +13,35 @@ namespace RestaurantReservation.Db.Repositories
             _context = context;
         }
 
-        public void CreateOrder(Order order)
+        public async Task CreateOrderAsync(Order order)
         {
             _context.Orders.Add(order);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
-        public void UpdateOrder(Order order)
+        public async Task UpdateOrderAsync(Order order)
         {
-            var existingOrder = _context.Orders.Find(order.OrderId);
-            if (existingOrder != null)
-            {
-                existingOrder.ReservationId = order.ReservationId;
-                existingOrder.EmployeeId = order.EmployeeId;
-                existingOrder.OrderDate = order.OrderDate;
-                existingOrder.TotalAmount = order.TotalAmount;
-                existingOrder.Reservation = order.Reservation;
-                existingOrder.Employee = order.Employee;
-                existingOrder.OrderItems = order.OrderItems;
-                _context.SaveChanges();
-            }
+            _context.Orders.Update(order);
+            await _context.SaveChangesAsync();
         }
 
-        public void DeleteOrder(int OrderId)
+        public async Task DeleteOrderAsync(int OrderId)
         {
             var order = _context.Orders.Find(OrderId);
             if (order != null)
             {
                 _context.Orders.Remove(order);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
+        }
+
+        public async Task<List<Order>> ListOrdersAndMenuItemsAsync(int reservationId)
+        {
+            return await _context.Orders
+                .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.MenuItem)
+                .Where(o => o.ReservationId == reservationId)
+                .ToListAsync();
         }
 
         public async Task<decimal> CalculateAverageOrderAmountAsync(int employeeId)

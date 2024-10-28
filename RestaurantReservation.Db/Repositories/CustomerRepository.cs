@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RestaurantReservation.Db.DataModels;
+using RestaurantReservation.Db.RepositoriesInterfaces;
 
 namespace RestaurantReservation.Db.Repositories
 {
-    public class CustomerRepository
+    public class CustomerRepository : ICustomerRepository
     {
         private readonly RestaurantReservationDbContext _context;
 
@@ -12,49 +13,32 @@ namespace RestaurantReservation.Db.Repositories
             _context = context;
         }
 
-        public void CreateCustomer(Customer customer)
+        public async Task CreateCustomerAsync(Customer customer)
         {
             _context.Customers.Add(customer);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
-        public void UpdateCustomer(Customer customer)
+        public async Task UpdateCustomerAsync(Customer customer)
         {
-            var existingCustomer = _context.Customers.Find(customer.CustomerId);
-            if (existingCustomer != null)
-            {
-                existingCustomer.FirstName = customer.FirstName;
-                existingCustomer.LastName = customer.LastName;
-                existingCustomer.Email = customer.Email;
-                existingCustomer.PhoneNumber = customer.PhoneNumber;
-                existingCustomer.Reservations = customer.Reservations;
-                _context.SaveChanges();
-            }
+            _context.Customers.Update(customer);
+            await _context.SaveChangesAsync();
         }
 
-        public void DeleteCustomer(int customerId)
+        public async Task DeleteCustomerAsync(int customerId)
         {
             var customer = _context.Customers.Find(customerId);
             if (customer != null)
             {
                 _context.Customers.Remove(customer);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
         }
 
-        public async Task<List<Reservation>> GetReservationsByCustomerAsync(int customerId)
-        {
-            return await _context.Reservations
-                           .Include(c => c.Customer)
-                           .Include(c => c.Restaurant)
-                           .Where(c => c.CustomerId == customerId)
-                           .ToListAsync();
-        }
-
-        public async Task<List<Customer>> GetCustomersWithPartySizeGreaterThanAsync(int partySize)
+        public async Task<List<Customer>> GetCustomersWithPartySizeGreaterThanAsync(int partySize, int pageNumber, int pageSize)
         {
             return await _context.Customers
-                           .FromSqlInterpolated($"GetCustomersWithPartySizeGreaterThan {partySize}")
+                           .FromSqlInterpolated($"GetCustomersWithPartySizeGreaterThan {partySize}, {pageNumber}, {pageSize}")
                            .ToListAsync();
         }
     }

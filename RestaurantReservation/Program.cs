@@ -22,15 +22,15 @@ CalculateTotalRevenue();
 
 GetCustomersWithPartySize();
 
-static void GetCustomersWithPartySize()
+static async void GetCustomersWithPartySize()
 {
     var dbContext = new RestaurantReservationDbContext();
     var customerService = new CustomerRepository(dbContext);
-    var customers = customerService.GetCustomersWithPartySizeGreaterThanAsync(3);
+    var customers = await customerService.GetCustomersWithPartySizeGreaterThanAsync(3, 2, 2);
     
     Console.WriteLine($"Customers with party size greater than 3 are: ");
 
-    foreach (var customer in customers.Result)
+    foreach (var customer in customers)
     {
         Console.WriteLine($"{customer.FirstName} {customer.LastName}");
     }

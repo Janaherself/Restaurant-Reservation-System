@@ -1,8 +1,9 @@
 ﻿using RestaurantReservation.Db.DataModels;
+using RestaurantReservation.Db.RepositoriesInterfaces;
 
 namespace RestaurantReservation.Db.Repositories
 {
-    public class MenuItemRepository
+    public class MenuItemRepository : IMenuItemRepository
     {
         private readonly RestaurantReservationDbContext _context;
 
@@ -11,34 +12,26 @@ namespace RestaurantReservation.Db.Repositories
             _context = context;
         }
 
-        public void CreateMenuItem(MenuItem menuItem)
+        public async Task CreateMenuItemAsync(MenuItem menuItem)
         {
             _context.MenuItem.Add(menuItem);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
-        public void UpdateMenuItem(MenuItem menuItem)
+        public async Task UpdateMenuItemAsync(MenuItem menuItem)
         {
-            var existingMenuItem = _context.MenuItem.Find(menuItem.MenuItemId);
-            if (existingMenuItem != null)
-            {
-                existingMenuItem.Name = menuItem.Name;
-                existingMenuItem.Description = menuItem.Description;
-                existingMenuItem.Price = menuItem.Price;
-                existingMenuItem.Restaurant = menuItem.Restaurant;
-                existingMenuItem.RestaurantId = menuItem.RestaurantId;
-                existingMenuItem.OrderItems = menuItem.OrderItems;
-                _context.SaveChanges();
-            }
+            _context.MenuItem.Update(menuItem);
+            await _context.SaveChangesAsync();
+
         }
 
-        public void DeleteMenuItem(int menuItemId)
+        public async Task DeleteMenuItemAsync(int menuItemId)
         {
             var menuItem = _context.MenuItem.Find(menuItemId);
             if (menuItem != null)
             {
                 _context.MenuItem.Remove(menuItem);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
         }
     }

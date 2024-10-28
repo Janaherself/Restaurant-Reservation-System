@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RestaurantReservation.Db.DataModels;
+using RestaurantReservation.Db.RepositoriesInterfaces;
 
 namespace RestaurantReservation.Db.Repositories
 {
-    public class EmployeeRepository
+    public class EmployeeRepository : IEmployeeRepository
     {
         private readonly RestaurantReservationDbContext _context;
 
@@ -12,34 +13,25 @@ namespace RestaurantReservation.Db.Repositories
             _context = context;
         }
 
-        public void CreateEmployee(Employee employee)
+        public async Task CreateEmployeeAsync(Employee employee)
         {
             _context.Employees.Add(employee);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
-        public void UpdateEmployee(Employee employee)
+        public async Task UpdateEmployeeAsync(Employee employee)
         {
-            var existingEmployee = _context.Employees.Find(employee.EmployeeId);
-            if (existingEmployee != null)
-            {
-                existingEmployee.FirstName = employee.FirstName;
-                existingEmployee.LastName = employee.LastName;
-                existingEmployee.Position = employee.Position;
-                existingEmployee.Restaurant = employee.Restaurant;
-                existingEmployee.RestaurantId = employee.RestaurantId;
-                existingEmployee.Orders = employee.Orders;
-                _context.SaveChanges();
-            }
+            _context.Employees.Update(employee);
+            await _context.SaveChangesAsync();
         }
 
-        public void DeleteEmployee(int employeeId)
+        public async Task DeleteEmployeeAsync(int employeeId)
         {
             var employee = _context.Employees.Find(employeeId);
             if (employee != null)
             {
                 _context.Employees.Remove(employee);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
         }
         public async Task<List<Employee>> ListManagersAsync()

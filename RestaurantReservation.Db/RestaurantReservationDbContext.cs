@@ -1,5 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RestaurantReservation.Db.DataModels;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Protocols;
+using System.Configuration;
+using System.IO;
 
 namespace RestaurantReservation.Db
 {
@@ -20,9 +24,8 @@ namespace RestaurantReservation.Db
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(
-                "Data Source = LAPTOP-5RBHM2O9; Initial Catalog = RestaurantReservationCore; Trusted_Connection = True; TrustServerCertificate = True"
-                );
+            var configuration = new ConfigurationBuilder().SetBasePath(AppDomain.CurrentDomain.BaseDirectory).AddJsonFile("appsettings.json", false, false).Build();
+            optionsBuilder.UseSqlServer(configuration.GetConnectionString("RestaurantReservationCore"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
