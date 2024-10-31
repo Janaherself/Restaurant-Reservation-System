@@ -6,7 +6,7 @@ namespace RestaurantReservation.Db.RepositoriesInterfaces
     {
         Task CreateCustomerAsync(Customer customer);
         Task DeleteCustomerAsync(int customerId);
-        Task<List<Customer>> GetCustomersWithPartySizeGreaterThanAsync(int partySize, int pageNumber, int pageSize);
+        Task<(int count, List<Customer> customers)> GetCustomersWithPartySizeGreaterThanAsync(int partySize, int pageNumber, int pageSize);
         Task UpdateCustomerAsync(Customer customer);
     }
 }

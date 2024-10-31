@@ -1,32 +1,32 @@
 ﻿using RestaurantReservation.Db.DataModels;
 using RestaurantReservation.Db.Repositories;
 
-await CreateExampleCustomerAsync();
+//await CreateExampleCustomerAsync();
 
-await ListmanagersAsync();
+//await ListmanagersAsync();
 
-await GetReservationsByCustomerAsync();
+//await GetReservationsByCustomerAsync();
 
-await ListOrdersAndMenuItemsAsync();
+//await ListOrdersAndMenuItemsAsync();
 
-await ListOrderedMenuItemsAsync();
+//await ListOrderedMenuItemsAsync();
 
-await CalculateAverageOrderAmountAsync();
+//await CalculateAverageOrderAmountAsync();
 
-await GetReservationsByViewAsync();
+//await GetReservationsByViewAsync();
 
-await GetEmployeesByViewAsync();
+//await GetEmployeesByViewAsync();
 
-await CalculateTotalRevenueAsync();
+//await CalculateTotalRevenueAsync();
 
 await GetCustomersWithPartySizeAsync();
 
 static async Task GetCustomersWithPartySizeAsync()
 {
     var customerService = new CustomerRepository();
-    var customers = await customerService.GetCustomersWithPartySizeGreaterThanAsync(3, 2, 2);
+    var (count, customers) = await customerService.GetCustomersWithPartySizeGreaterThanAsync(3, 3, 2);
     
-    Console.WriteLine($"Customers with party size greater than 3 are: ");
+    Console.WriteLine($"Number of customers with party size greater than '3' is {count}\n");
 
     foreach (var customer in customers)
     {

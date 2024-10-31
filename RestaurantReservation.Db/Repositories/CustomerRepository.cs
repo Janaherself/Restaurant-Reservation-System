@@ -28,11 +28,17 @@ namespace RestaurantReservation.Db.Repositories
             }
         }
 
-        public async Task<List<Customer>> GetCustomersWithPartySizeGreaterThanAsync(int partySize, int pageNumber, int pageSize)
+        public async Task<(int count, List<Customer> customers)> GetCustomersWithPartySizeGreaterThanAsync(int partySize, int pageNumber, int pageSize)
         {
-            return await _context.Customers
+            var count = await _context.Database
+                        .SqlQuery<int>($"GetCountOfCustomerWithPartySizeGreaterThan {partySize}")
+                        .ToListAsync();
+
+            var customer = await _context.Customers
                            .FromSqlInterpolated($"GetCustomersWithPartySizeGreaterThan {partySize}, {pageNumber}, {pageSize}")
                            .ToListAsync();
+
+            return (count[0], customer);
         }
     }
 }
