@@ -15,11 +15,11 @@ using RestaurantReservation.Db.Repositories;
 
 //await GetReservationsByViewAsync();
 
-//await GetEmployeesByViewAsync();
+await GetEmployeesByViewAsync();
 
 //await CalculateTotalRevenueAsync();
 
-await GetCustomersWithPartySizeAsync();
+//await GetCustomersWithPartySizeAsync();
 
 static async Task GetCustomersWithPartySizeAsync()
 {
@@ -50,7 +50,9 @@ static async Task GetEmployeesByViewAsync()
     foreach (var employee in employees)
     {
         Console.WriteLine($"{employee.EmployeeId}. {employee.FirstName} {employee.LastName}\n" +
-                          $"{employee.Position} at {employee.RestaurantName}\n");
+                          $"{employee.Position} at {employee.RestaurantName}, {employee.Address}\n" +
+                          $"Opening hours: {employee.OpeningHours}\n" +
+                          $"Phone number: {employee.PhoneNumber}\n");
     }
 }
 
