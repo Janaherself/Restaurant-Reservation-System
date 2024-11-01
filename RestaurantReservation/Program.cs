@@ -1,25 +1,25 @@
 ﻿using RestaurantReservation.Db.DataModels;
 using RestaurantReservation.Db.Repositories;
 
-//await CreateExampleCustomerAsync();
+await CreateExampleCustomerAsync();
 
-//await ListmanagersAsync();
+await ListmanagersAsync();
 
-//await GetReservationsByCustomerAsync();
+await GetReservationsByCustomerAsync();
 
-//await ListOrdersAndMenuItemsAsync();
+await ListOrdersAndMenuItemsAsync();
 
-//await ListOrderedMenuItemsAsync();
+await ListOrderedMenuItemsAsync();
 
-//await CalculateAverageOrderAmountAsync();
+await CalculateAverageOrderAmountAsync();
 
-//await GetReservationsByViewAsync();
+await GetReservationsByViewAsync();
 
 await GetEmployeesByViewAsync();
 
-//await CalculateTotalRevenueAsync();
+await CalculateTotalRevenueAsync();
 
-//await GetCustomersWithPartySizeAsync();
+await GetCustomersWithPartySizeAsync();
 
 static async Task GetCustomersWithPartySizeAsync()
 {
@@ -49,7 +49,7 @@ static async Task GetEmployeesByViewAsync()
 
     foreach (var employee in employees)
     {
-        Console.WriteLine($"{employee.EmployeeId}. {employee.FirstName} {employee.LastName}\n" +
+        Console.WriteLine($"Employee: {employee.EmployeeId}. {employee.FirstName} {employee.LastName}\n" +
                           $"{employee.Position} at {employee.RestaurantName}, {employee.Address}\n" +
                           $"Opening hours: {employee.OpeningHours}\n" +
                           $"Phone number: {employee.PhoneNumber}\n");
@@ -63,8 +63,12 @@ static async Task GetReservationsByViewAsync()
 
     foreach (var reservation in reservations)
     {
-        Console.WriteLine($"{reservation.ReservationId}. {reservation.FirstName} {reservation.LastName}\n" +
-                          $"{reservation.RestaurantName}, {reservation.ReservationDate}\n");
+        Console.WriteLine($"Reservation: {reservation.ReservationId}. {reservation.ReservationDate}\n" +
+                          $"Customer: {reservation.CustomerId}. {reservation.CustomerFirstName} {reservation.CustomerLastName}\n" +
+                          $"Customer phone number: {reservation.CustomerPhoneNumber}\n" +
+                          $"Restaurant: {reservation.RestaurantName}, {reservation.RestaurantAddress}\n" +
+                          $"Restaurant phone number: {reservation.RestaurantPhoneNumber}\n" +
+                          $"Opening hours: {reservation.OpeningHours}\n");
     }
 }
 
