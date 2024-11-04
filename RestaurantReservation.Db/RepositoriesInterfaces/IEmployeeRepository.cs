@@ -6,7 +6,7 @@ namespace RestaurantReservation.Db.RepositoriesInterfaces
     {
         Task CreateEmployeeAsync(Employee employee);
         Task DeleteEmployeeAsync(int employeeId);
-        Task<List<EmployeeView>> EmployeeViewAsync();
+        Task<List<EmployeeView>> ListEmployeeViewAsync();
         Task<List<Employee>> ListManagersAsync();
         Task UpdateEmployeeAsync(Employee employee);
     }

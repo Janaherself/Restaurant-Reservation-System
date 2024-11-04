@@ -45,21 +45,21 @@ static async Task CalculateTotalRevenueAsync()
 static async Task GetEmployeesByViewAsync()
 {
     var employeeService = new EmployeeRepository();
-    var employees = await employeeService.EmployeeViewAsync();
+    var employees = await employeeService.ListEmployeeViewAsync();
 
     foreach (var employee in employees)
     {
-        Console.WriteLine($"Employee: {employee.EmployeeId}. {employee.FirstName} {employee.LastName}\n" +
-                          $"{employee.Position} at {employee.RestaurantName}, {employee.Address}\n" +
+        Console.WriteLine($"Employee: {employee.EmployeeId}. {employee.EmployeeFirstName} {employee.EmployeeLastName}\n" +
+                          $"{employee.EmployeePosition} at {employee.RestaurantName}, {employee.RestaurantAddress}\n" +
                           $"Opening hours: {employee.OpeningHours}\n" +
-                          $"Phone number: {employee.PhoneNumber}\n");
+                          $"Phone number: {employee.RestaurantPhoneNumber}\n");
     }
 }
 
 static async Task GetReservationsByViewAsync()
 {
     var reservationService = new ReservationRepository();
-    var reservations = await reservationService.ReservationViewAsync();
+    var reservations = await reservationService.ListReservationViewAsync();
 
     foreach (var reservation in reservations)
     {

@@ -37,7 +37,7 @@ namespace RestaurantReservation.Db.Repositories
                            .ToListAsync();
         }
 
-        public async Task<List<ReservationView>> ReservationViewAsync()
+        public async Task<List<ReservationView>> ListReservationViewAsync()
         {
             return await _context.ReservationsView.ToListAsync();
         }

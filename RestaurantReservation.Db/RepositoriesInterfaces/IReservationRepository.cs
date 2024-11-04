@@ -7,7 +7,7 @@ namespace RestaurantReservation.Db.RepositoriesInterfaces
         Task CreateReservationAsync(Reservation reservation);
         Task DeleteReservationAsync(int reservationId);
         Task<List<Reservation>> GetReservationsByCustomerAsync(int customerId);
-        Task<List<ReservationView>> ReservationViewAsync();
+        Task<List<ReservationView>> ListReservationViewAsync();
         Task UpdateReservationAsync(Reservation reservation);
     }
 }

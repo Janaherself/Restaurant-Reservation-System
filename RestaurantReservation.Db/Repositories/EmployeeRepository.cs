@@ -32,7 +32,7 @@ namespace RestaurantReservation.Db.Repositories
             return await _context.Employees.Where(e => e.Position == "Manager").ToListAsync();
         }
 
-        public async Task<List<EmployeeView>> EmployeeViewAsync()
+        public async Task<List<EmployeeView>> ListEmployeeViewAsync()
         {
             return await _context.EmployeesView.ToListAsync();
         }
