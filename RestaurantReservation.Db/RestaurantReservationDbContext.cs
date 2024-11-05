@@ -24,7 +24,7 @@ namespace RestaurantReservation.Db
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var configuration = new ConfigurationBuilder().SetBasePath(AppDomain.CurrentDomain.BaseDirectory).AddJsonFile("appsettings.json", false, false).Build();
+            var configuration = new ConfigurationBuilder().SetBasePath(Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\"))).AddJsonFile("appsettings.json", false, false).Build();
             optionsBuilder.UseSqlServer(configuration.GetConnectionString("RestaurantReservationCore"));
         }
 
