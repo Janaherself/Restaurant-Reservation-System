@@ -4,8 +4,16 @@ using RestaurantReservation.Db.RepositoriesInterfaces;
 
 namespace RestaurantReservation.Db.Repositories
 {
-    public class OrderRepository : BaseRepository, IOrderRepository
+    public class OrderRepository : IOrderRepository, IDisposable
     {
+        private readonly RestaurantReservationDbContext _context;
+        private bool _disposed = false;
+
+        public OrderRepository(DbContextFactory factory)
+        {
+            _context = factory.CreateDbContext();
+        }
+
         public async Task CreateOrderAsync(Order order)
         {
             _context.Orders.Add(order);
@@ -53,5 +61,13 @@ namespace RestaurantReservation.Db.Repositories
                                  .SingleAsync();
         }
 
+        public void Dispose()
+        {
+            if (!_disposed)
+            {
+                _context.Dispose();
+                _disposed = true;
+            }
+        }
     }
 }

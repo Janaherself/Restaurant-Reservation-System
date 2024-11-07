@@ -1,151 +1,34 @@
-﻿using RestaurantReservation.Db.DataModels;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using RestaurantReservation.Db;
 using RestaurantReservation.Db.Repositories;
+using RestaurantReservation.Db.RepositoriesInterfaces;
 
-await CreateExampleCustomerAsync();
-
-await ListmanagersAsync();
-
-await GetReservationsByCustomerAsync();
-
-await ListOrdersAndMenuItemsAsync();
-
-await ListOrderedMenuItemsAsync();
-
-await CalculateAverageOrderAmountAsync();
-
-await GetReservationsByViewAsync();
-
-await GetEmployeesByViewAsync();
-
-await CalculateTotalRevenueAsync();
-
-await GetCustomersWithPartySizeAsync();
-
-static async Task GetCustomersWithPartySizeAsync()
+public class Program
 {
-    var customerService = new CustomerRepository();
-    var (count, customers) = await customerService.GetCustomersWithPartySizeGreaterThanAsync(3, 3, 2);
-    
-    Console.WriteLine($"Number of customers with party size greater than '3' is {count}\n");
-
-    foreach (var customer in customers)
+    public static void Main(string[] args)
     {
-        Console.WriteLine($"{customer.FirstName} {customer.LastName}");
+        var host = CreateHostBuilder(args).Build();
+        host.Run();
     }
-}
 
-static async Task CalculateTotalRevenueAsync()
-{
-    var orderService = new OrderRepository();
-    var totalRevenue = await orderService.CalculateTotalRevenueByRestaurantAsync(1);
+    public static IHostBuilder CreateHostBuilder(string[] args) =>
+        Host.CreateDefaultBuilder(args)
+            .ConfigureServices((context, services) =>
+            {
+                services.AddDbContext<RestaurantReservationDbContext>(options =>
+                    options.UseSqlServer(context.Configuration.GetConnectionString("DefaultConnection")));
 
-    Console.WriteLine($"Total revenue for restaurant with Id = 1 is: {totalRevenue}$");
-}
-
-static async Task GetEmployeesByViewAsync()
-{
-    var employeeService = new EmployeeRepository();
-    var employees = await employeeService.ListEmployeeViewAsync();
-
-    foreach (var employee in employees)
-    {
-        Console.WriteLine($"Employee: {employee.EmployeeId}. {employee.EmployeeFirstName} {employee.EmployeeLastName}\n" +
-                          $"{employee.EmployeePosition} at {employee.RestaurantName}, {employee.RestaurantAddress}\n" +
-                          $"Opening hours: {employee.OpeningHours}\n" +
-                          $"Phone number: {employee.RestaurantPhoneNumber}\n");
-    }
-}
-
-static async Task GetReservationsByViewAsync()
-{
-    var reservationService = new ReservationRepository();
-    var reservations = await reservationService.ListReservationViewAsync();
-
-    foreach (var reservation in reservations)
-    {
-        Console.WriteLine($"Reservation: {reservation.ReservationId}. {reservation.ReservationDate}\n" +
-                          $"Customer: {reservation.CustomerId}. {reservation.CustomerFirstName} {reservation.CustomerLastName}\n" +
-                          $"Customer phone number: {reservation.CustomerPhoneNumber}\n" +
-                          $"Restaurant: {reservation.RestaurantName}, {reservation.RestaurantAddress}\n" +
-                          $"Restaurant phone number: {reservation.RestaurantPhoneNumber}\n" +
-                          $"Opening hours: {reservation.OpeningHours}\n");
-    }
-}
-
-static async Task CalculateAverageOrderAmountAsync()
-{
-    var orderService = new OrderRepository();
-    var averageOrderAmount = await orderService.CalculateAverageOrderAmountAsync(8);
-
-    Console.WriteLine($"Average order amount of employee with Id = 8 is: " +
-        $"{averageOrderAmount}");
-}
-
-static async Task ListOrderedMenuItemsAsync()
-{
-    var orderItemService = new OrderItemRepository();
-    var items = await orderItemService.ListOrderedMenuItemsAsync(5);
-
-    Console.WriteLine($"Ordered menu items for the reservation with Id = 5 is: \n");
-
-    foreach ( var item in items)
-    {
-        Console.WriteLine($"{item.MenuItemId}. {item.Name}");
-    }
-}
-
-static async Task ListOrdersAndMenuItemsAsync()
-{
-    var orderService = new OrderRepository();
-    var orders = await orderService.ListOrdersAndMenuItemsAsync(5);
-
-    Console.WriteLine($"Orders and menu items for the reservation with Id = 5 is: ");
-
-    foreach (var order in orders)
-    {
-        Console.WriteLine($"\nOrder ID: {order.OrderId}, Total Amount: {order.TotalAmount}");
-
-        foreach (var item in order.OrderItems)
-        {
-            Console.WriteLine($"Item: {item.MenuItem.Name}, Quantity: {item.Quantity}");
-        }
-    }
-}
-
-static async Task GetReservationsByCustomerAsync()
-{
-    var customerService = new ReservationRepository();
-    var reservations = await customerService.GetReservationsByCustomerAsync(1);
-
-    Console.WriteLine($"Reservation of the customer with Id = 1 is: \n");
-
-    foreach (var reservation in reservations)
-    {
-        Console.WriteLine($"{reservation.ReservationId}. {reservation.ReservationDate}\n" +
-                          $"{reservation.Restaurant.Name}\n" +
-                          $"Table: {reservation.TableId}\n"
-                          );
-    }
-}
-
-static async Task ListmanagersAsync()
-{
-    var employeeService = new EmployeeRepository();
-    var managers = await employeeService.ListManagersAsync();
-
-    foreach (var manager in managers)
-    {
-        Console.WriteLine($"{manager.FirstName} {manager.LastName}");
-    }
-}
-static async Task CreateExampleCustomerAsync()
-{
-    var customerService = new CustomerRepository();
-    await customerService.CreateCustomerAsync(new Customer
-    {
-        FirstName = "Jana",
-        LastName = "Abusaa",
-        Email = "jana@gmail.com",
-        PhoneNumber = "0011223345"
-    });
+                services.AddSingleton<DbContextFactory>();
+                services.AddScoped<ICustomerRepository, CustomerRepository>();
+                services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+                services.AddScoped<IMenuItemRepository, MenuItemRepository>();
+                services.AddScoped<IOrderItemRepository, OrderItemRepository>();
+                services.AddScoped<IOrderRepository, OrderRepository>();
+                services.AddScoped<IReservationRepository, ReservationRepository>();
+                services.AddScoped<IRestaurantRepository, RestaurantRepository>();
+                services.AddScoped<ITableRepository, TableRepository>();
+            });
 }
