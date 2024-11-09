@@ -19,7 +19,7 @@ public class Program
             .ConfigureServices((context, services) =>
             {
                 services.AddDbContext<RestaurantReservationDbContext>(options =>
-                    options.UseSqlServer(context.Configuration.GetConnectionString("DefaultConnection")));
+                    options.UseSqlServer(context.Configuration.GetConnectionString("RestaurantReservationCore")));
 
                 services.AddSingleton<DbContextFactory>();
                 services.AddScoped<ICustomerRepository, CustomerRepository>();
