@@ -9,17 +9,11 @@ namespace RestaurantReservation.Db
 {
     public class RestaurantReservationDbContext : DbContext
     {
-        public RestaurantReservationDbContext()
-        {
-
-        }
-
         public RestaurantReservationDbContext(DbContextOptions<RestaurantReservationDbContext> options)
             : base(options)
         {
 
         }
-
 
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Employee> Employees { get; set; }
@@ -32,22 +26,13 @@ namespace RestaurantReservation.Db
         public DbSet<ReservationView> ReservationsView { get; set; }
         public DbSet<EmployeeView> EmployeesView { get; set; }
 
-
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            var configuration = new ConfigurationBuilder().SetBasePath(Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\"))).AddJsonFile("appsettings.json", false, false).Build();
-            optionsBuilder.UseSqlServer(configuration.GetConnectionString("RestaurantReservationCore"));
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<EmployeeView>().HasNoKey().ToView("EmployeesView");
 
             modelBuilder.Entity<ReservationView>().HasNoKey().ToView("ReservationsView");
 
-            modelBuilder.Entity<OrderItem>()
-                .ToTable("OrderItems");
+            modelBuilder.Entity<OrderItem>().ToTable("OrderItems");
 
             modelBuilder.Entity<Customer>().HasData(
                 new Customer { CustomerId = 1, FirstName = "John", LastName = "Doe", Email = "john.doe@example.com", PhoneNumber = "1234567890" },

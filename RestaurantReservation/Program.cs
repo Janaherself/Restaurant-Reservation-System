@@ -23,7 +23,6 @@ namespace RestaurantReservation
                     services.AddDbContext<RestaurantReservationDbContext>(options =>
                         options.UseSqlServer(context.Configuration.GetConnectionString("RestaurantReservationCore")));
 
-                    services.AddScoped<BaseRepository>();
                     services.AddScoped<ICustomerRepository, CustomerRepository>();
                     services.AddScoped<IEmployeeRepository, EmployeeRepository>();
                     services.AddScoped<IMenuItemRepository, MenuItemRepository>();
