@@ -10,10 +10,14 @@ namespace RestaurantReservation
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
-            host.Run();
+            host.Start();
+
+            var customerservice = host.Services.GetRequiredService<ICustomerRepository>();
+            var customers = await customerservice.GetCustomersWithPartySizeGreaterThanAsync(3, 2, 2);
+            Console.WriteLine($"Count of customers that have party size greater than 3 is: {customers.count}.");
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
