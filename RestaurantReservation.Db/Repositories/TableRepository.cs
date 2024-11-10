@@ -3,16 +3,8 @@ using RestaurantReservation.Db.RepositoriesInterfaces;
 
 namespace RestaurantReservation.Db.Repositories
 {
-    public class TableRepository : ITableRepository, IDisposable
+    public class TableRepository : BaseRepository, ITableRepository
     {
-        private readonly RestaurantReservationDbContext _context;
-        private bool _disposed = false;
-
-        public TableRepository(DbContextFactory factory)
-        {
-            _context = factory.CreateDbContext();
-        }
-
         public async Task CreateTableAsync(Table table)
         {
             _context.Tables.Add(table);
@@ -32,15 +24,6 @@ namespace RestaurantReservation.Db.Repositories
             {
                 _context.Tables.Remove(table);
                 await _context.SaveChangesAsync();
-            }
-        }
-
-        public void Dispose()
-        {
-            if (!_disposed)
-            {
-                _context.Dispose();
-                _disposed = true;
             }
         }
     }

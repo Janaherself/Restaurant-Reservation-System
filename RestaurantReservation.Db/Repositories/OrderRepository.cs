@@ -4,16 +4,8 @@ using RestaurantReservation.Db.RepositoriesInterfaces;
 
 namespace RestaurantReservation.Db.Repositories
 {
-    public class OrderRepository : IOrderRepository, IDisposable
+    public class OrderRepository : BaseRepository, IOrderRepository
     {
-        private readonly RestaurantReservationDbContext _context;
-        private bool _disposed = false;
-
-        public OrderRepository(DbContextFactory factory)
-        {
-            _context = factory.CreateDbContext();
-        }
-
         public async Task CreateOrderAsync(Order order)
         {
             _context.Orders.Add(order);
@@ -59,15 +51,6 @@ namespace RestaurantReservation.Db.Repositories
             return await _context.Database
                                  .SqlQuery<decimal>($"SELECT dbo.CalculateTotalRevenue({restaurantId}) AS Value")
                                  .SingleAsync();
-        }
-
-        public void Dispose()
-        {
-            if (!_disposed)
-            {
-                _context.Dispose();
-                _disposed = true;
-            }
         }
     }
 }
