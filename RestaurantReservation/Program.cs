@@ -24,8 +24,12 @@ namespace RestaurantReservation
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((context, services) =>
                 {
+                    var configuration = new ConfigurationBuilder().SetBasePath(Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\")))
+                    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                    .Build();
+
                     services.AddDbContext<RestaurantReservationDbContext>(options =>
-                        options.UseSqlServer(context.Configuration.GetConnectionString("RestaurantReservationCore")));
+                        options.UseSqlServer(configuration.GetConnectionString("RestaurantReservationCore")));
 
                     services.AddScoped<ICustomerRepository, CustomerRepository>();
                     services.AddScoped<IEmployeeRepository, EmployeeRepository>();
