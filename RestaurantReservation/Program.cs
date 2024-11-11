@@ -22,7 +22,7 @@ namespace RestaurantReservation
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureServices((context, services) =>
+                .ConfigureServices((services) =>
                 {
                     var configuration = new ConfigurationBuilder().SetBasePath(Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\")))
                     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
